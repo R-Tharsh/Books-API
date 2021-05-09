@@ -1,6 +1,8 @@
 import React from 'react';
 import config from '../config';
 import './Book.css'
+import { Button} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class Book extends React.Component {
@@ -52,7 +54,8 @@ class Book extends React.Component {
     render() {
       let { error, isLoaded, items, rank } = this.state;
       if (error || !items[rank]) {
-        return <button className="" onClick={this.handleGetRandomRank}>Give me a Best Seller</button>
+        return (<Button style={{marginTop:"20px"}}
+        variant="danger"  onClick={this.handleGetRandomRank}>Book Details</Button>)
 
       } 
       else if (!isLoaded) {
@@ -60,13 +63,17 @@ class Book extends React.Component {
       }
       //if user is first landing on the page, only display button 
       else if (!rank) {
-        return <button className="" onClick={this.handleGetRandomRank}>Give me a Best Seller</button>
+        return <Button style={{marginTop:"20px"}}
+        variant="danger" onClick={this.handleGetRandomRank}>Book Details</Button>
       }
       else {
         return (
           <div className="content">
             <div>
-              <button className="" onClick={this.handleGetRandomRank}>Give me a Best Seller</button>
+              <h3 style={{fontFamily:"initial",fontWeight:"700",color:"rgb(12, 12, 77)"}}>Choose Your Favourite</h3>
+            </div>
+            <div>
+              <Button variant="success"  onClick={this.handleGetRandomRank}>Next</Button>
             </div>
             <div className="bookCoverStyling">
               <img src={items[rank].book_image} alt="Book cover"/>
