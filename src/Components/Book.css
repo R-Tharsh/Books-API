@@ -1,0 +1,30 @@
+.content {
+    text-align: center;
+    padding: 10px;
+}
+
+button {
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background-color: rgba(66, 53, 66, 0);
+    border: 2px solid rgb(65, 56, 185);
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.bookCoverStyling img {
+    height: 300px;
+    width: 200px;
+}
+
+.titleStyling {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.descriptionStyling {
+    font-style: italic;
+}
